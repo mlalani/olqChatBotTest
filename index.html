@@ -1,36 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoya's Chatbot</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-      text-align: center;
-      padding: 10px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f7fc;
+      color: #333;
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 32px;
+      text-align: left;
       margin-bottom: 20px;
+      color: #2a4365;
+    }
+
+    .intro {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 40px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      flex-wrap: wrap;
+    }
+
+    .intro img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #2a4365;
+      flex-shrink: 0;
+    }
+
+    .intro-text {
+      flex: 1;
+      min-width: 200px;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .intro-text p {
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .intro {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro img {
+        width: 140px;
+        height: 140px;
+      }
+
+      .intro-text {
+        font-size: 16px;
+      }
+
+      .intro img {
+        margin-bottom: 15px;
+      }
+
+      .intro-text {
+        text-align: center;
+      }
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #e3f2fd;
+      --df-messenger-button-titlebar-color: #2a4365;
+      --df-messenger-button-titlebar-font-color: white;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-font-color: #333;
     }
   </style>
 </head>
+
 <body>
 
-  <h1>Zoya's Chatbot v4</h1>
+  <h1>Zoya's Chatbot</h1>
+
+  <div class="intro">
+    <img src="./myPhoto.png" alt="Student Image" />
+    <div class="intro-text">
+      <p>
+        Meet Zoya’s Chatbot — your personal school helper! Whether you're looking for quick answers, study tips, or just
+        some help with your homework, this friendly bot is here to guide you. Go ahead and ask anything!
+      </p>
+    </div>
+  </div>
+
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-  <df-messenger
-    intent="WELCOME"
-    chat-title="Zoya's Chatbot"
-    agent-id="98129509-f285-46c3-8191-29def1a5aa1a"
-    language-code="en"
-    expand="true"
-  ></df-messenger>
+  <df-messenger intent="WELCOME" chat-title="Zoya's Chatbot" agent-id="98129509-f285-46c3-8191-29def1a5aa1a"
+    language-code="en" expand="true"></df-messenger>
 
 </body>
+
 </html>
