@@ -18,27 +18,18 @@
       font-size: 24px;
       margin-bottom: 20px;
     }
-
-    iframe {
-      width: 100%;
-      max-width: 500px;
-      height: 80vh;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease;
-    }
-
-    iframe:hover {
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
   </style>
 </head>
 <body>
 
   <h1>Zoya's Chatbot</h1>
-
-  <iframe src="https://console.dialogflow.com/api-client/demo/embedded/98129509-f285-46c3-8191-29def1a5aa1a"></iframe>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Zoya's Chatbot"
+    agent-id="98129509-f285-46c3-8191-29def1a5aa1a"
+    language-code="en"
+  ></df-messenger>
 
 </body>
 </html>
